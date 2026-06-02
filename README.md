@@ -1,7 +1,3 @@
-Aqui está o `README.md` atualizado com o seu apelido e o link correto apontando diretamente para o seu GitHub. Pode copiar e substituir no seu repositório:
-
----
-
 ```markdown
 # 🛡️ GeoShield API - Global Solution FIAP
 
