@@ -1,5 +1,6 @@
 package luciano_558975.GeoShield.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.lang.Nullable;
@@ -18,13 +19,12 @@ import java.util.List;
 public class Regiao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 30)
     private String nome;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 40)
     private String coordenadas;
 
     @Column(name = "populacao_afetada", nullable = false)
@@ -33,6 +33,7 @@ public class Regiao {
     @Column(name = "data_mapeamento", nullable = false)
     private LocalDate dataMapeamento;
 
-    @OneToMany(mappedBy = "regiao")
+    @JsonIgnore
+    @OneToMany(mappedBy = "regiao", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<AlertaEvento> alertas = new ArrayList<>();
 }

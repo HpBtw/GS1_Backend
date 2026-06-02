@@ -2,6 +2,7 @@ package luciano_558975.GeoShield.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
+import luciano_558975.GeoShield.dtos.NivelRiscoDTO;
 
 import java.time.LocalDate;
 
@@ -17,19 +18,20 @@ public class AlertaEvento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "tipo_alerta", nullable = false)
+    @Column(name = "tipo_alerta", nullable = false, length = 50)
     private String tipoAlerta;
 
     @Column(name = "probabilidade_tragedia", nullable = false)
     private Double probabilidadeTragedia;
 
-    @Column(name = "nivel_risco", nullable = false)
+    @Enumerated(EnumType.STRING)
+    @Column(name = "nivel_risco", length = 15, nullable = false)
     private NivelRisco nivelRisco;
 
     @Column(name = "data_emissao", nullable = false)
     private LocalDate dataEmissao;
 
-    @ManyToOne
-    @JoinColumn(name = "regiao_id", nullable = false)
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "regiao_id")
     private Regiao regiao;
 }

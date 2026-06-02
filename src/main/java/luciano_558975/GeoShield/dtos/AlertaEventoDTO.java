@@ -1,13 +1,11 @@
 package luciano_558975.GeoShield.dtos;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import luciano_558975.GeoShield.entities.AlertaEvento;
+import luciano_558975.GeoShield.entities.NivelRisco;
 
 import java.time.LocalDate;
 
@@ -27,9 +25,12 @@ public class AlertaEventoDTO {
     private Double probabilidadeTragedia;
 
     @NotNull(message = "O campo 'Data Emissao' é obrigatório.")
+    @PastOrPresent(message = "A data de emissão não pode estar no futuro.")
     private LocalDate dataEmissao;
 
-    private NivelRiscoDTO nivelRisco;
+    private NivelRisco nivelRisco;
+
+    @NotNull(message = "O campo 'Regiao' é obrigatório.")
     private RegiaoDTO regiao;
 
     public AlertaEventoDTO(AlertaEvento a) {
@@ -37,7 +38,7 @@ public class AlertaEventoDTO {
         this.tipoAlerta = a.getTipoAlerta();
         this.probabilidadeTragedia = a.getProbabilidadeTragedia();
         this.dataEmissao = a.getDataEmissao();
-        this.nivelRisco = new NivelRiscoDTO(a.getNivelRisco());
+        this.nivelRisco = a.getNivelRisco();
         this.regiao = new RegiaoDTO(a.getRegiao());
     }
 }

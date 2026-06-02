@@ -32,18 +32,11 @@ public class RegiaoDTO {
     @PastOrPresent(message = "O campo 'Data Mapeamento' deve conter a data atual ou anterior.")
     private LocalDate dataMapeamento;
 
-    private List<@Valid AlertaEventoDTO> alertas;
-
     public RegiaoDTO(Regiao r) {
         this.id = r.getId();
-        this.coordenadas = r.getCoordenadas();
-        this.dataMapeamento = r.getDataMapeamento();
         this.nome = r.getNome();
+        this.coordenadas = r.getCoordenadas();
         this.populacaoAfetada = r.getPopulacaoAfetada();
-
-        for (AlertaEvento alerta : r.getAlertas()) {
-            AlertaEventoDTO dto = new AlertaEventoDTO(alerta);
-            alertas.add(dto);
-        }
+        this.dataMapeamento = r.getDataMapeamento();
     }
 }
