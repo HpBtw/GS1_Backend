@@ -34,6 +34,6 @@ public class Regiao {
     private LocalDate dataMapeamento;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "regiao", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "regiao")
     private List<AlertaEvento> alertas = new ArrayList<>();
 }
