@@ -36,12 +36,12 @@ O projeto segue a arquitetura de **Relacionamento 1:N (One-To-Many)** onde **1 R
 1. Certifique-se de ter o **Java 17** e o **Maven** instalados na sua máquina.
 2. Clone este repositório:
    ```bash
-   git clone [https://github.com/HpBtw/GeoShield.git](https://github.com/HpBtw/GeoShield.git)
+   git clone https://github.com/HpBtw/GS1_Backend.git
 
 
 3. Acesse a pasta do projeto:
 ```bash
-cd GeoShield
+cd GS1_Backend
 
 ```
 
