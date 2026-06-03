@@ -1,4 +1,3 @@
-```markdown
 # 🛡️ GeoShield API - Global Solution FIAP
 
 ![Java](https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=java&logoColor=white)
@@ -39,7 +38,6 @@ O projeto segue a arquitetura de **Relacionamento 1:N (One-To-Many)** onde **1 R
    ```bash
    git clone [https://github.com/HpBtw/GeoShield.git](https://github.com/HpBtw/GeoShield.git)
 
-```
 
 3. Acesse a pasta do projeto:
 ```bash
