@@ -98,6 +98,3 @@ O sistema possui um `GlobalExceptionHandler` que captura e formata exceções em
 
 **Desenvolvido por:** hp - Estudante de Sistemas de Informação na FIAP.
 
-```
-
-```
