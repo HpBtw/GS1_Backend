@@ -3,9 +3,11 @@ package luciano_558975.GeoShield.service;
 import jakarta.persistence.EntityNotFoundException;
 import luciano_558975.GeoShield.dtos.RegiaoDTO;
 import luciano_558975.GeoShield.entities.Regiao;
+import luciano_558975.GeoShield.exceptions.DatabaseException;
 import luciano_558975.GeoShield.exceptions.ResourceNotFoundException;
 import luciano_558975.GeoShield.repository.RegiaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

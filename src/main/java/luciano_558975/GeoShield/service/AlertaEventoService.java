@@ -57,6 +57,8 @@ public class AlertaEventoService {
             return new AlertaEventoDTO(aleRepo.save(al));
         } catch (EntityNotFoundException e) {
             throw new ResourceNotFoundException("Alerta de ID: '" + id + "' não encontrado.");
+        } catch (DataIntegrityViolationException e) {
+            throw new DatabaseException("Não foi possível salvar a alerta. Região de ID: '" + dto.getRegiao().getId() + "' não encontrada.");
         }
     }
 
