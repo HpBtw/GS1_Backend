@@ -3,7 +3,6 @@ package luciano_558975.GeoShield.entities;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.lang.Nullable;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

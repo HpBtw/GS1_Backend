@@ -1,15 +1,12 @@
 package luciano_558975.GeoShield.dtos;
 
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import luciano_558975.GeoShield.entities.AlertaEvento;
 import luciano_558975.GeoShield.entities.Regiao;
 
 import java.time.LocalDate;
-import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor

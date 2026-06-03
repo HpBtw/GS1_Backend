@@ -2,7 +2,6 @@ package luciano_558975.GeoShield.service;
 
 import jakarta.persistence.EntityNotFoundException;
 import luciano_558975.GeoShield.dtos.AlertaEventoDTO;
-import luciano_558975.GeoShield.dtos.NivelRiscoDTO;
 import luciano_558975.GeoShield.entities.AlertaEvento;
 import luciano_558975.GeoShield.entities.NivelRisco;
 import luciano_558975.GeoShield.entities.Regiao;
@@ -13,7 +12,6 @@ import luciano_558975.GeoShield.repository.RegiaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;

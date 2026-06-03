@@ -2,7 +2,6 @@ package luciano_558975.GeoShield.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
-import luciano_558975.GeoShield.dtos.NivelRiscoDTO;
 
 import java.time.LocalDate;
 
